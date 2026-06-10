@@ -45,6 +45,6 @@ void Logger::log( const QString& message )
     if( !file.isOpen() ) return;     /// Если файл не открыт, ничего не делаем
     QTextStream out( &file );        /// Создаём текстовый поток для файла
     /// Выводим временную метку в формате ISO с миллисекундами и сообщение
-    out << QDateTime::currentDateTime().toString( "yyyy-MM-dd hh:mm:ss.zzz" ) << " " << message << "\n";
+    out << QDateTime::currentDateTime().toString( "dd.MM.yyyy hh:mm:ss.zzz" ) << " " << message << "\n";
     out.flush();   /// Сбрасываем буфер записав данные в файл на диске
 }
